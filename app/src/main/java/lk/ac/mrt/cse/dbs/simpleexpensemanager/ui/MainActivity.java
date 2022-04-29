@@ -24,10 +24,22 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.R;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.ExpenseManager;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.InMemoryDemoExpenseManager;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.DataBaseHelper;
+
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.DbDemoExpenseManager;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.AccountDAO;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.TransactionDAO;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.InMemoryAccountDAO;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.InMemoryTransactionDAO;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.DbAccountDAO;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.DbTransactionDAO;
+
+
 
 public class MainActivity extends AppCompatActivity {
     private ExpenseManager expenseManager;
@@ -45,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+
+
+//      DataBaseHelper database;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +81,18 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(mViewPager);
 
         /***  Begin generating dummy data for In-Memory implementation  ***/
-        expenseManager = new InMemoryDemoExpenseManager();
+
+        expenseManager = new DbDemoExpenseManager(new DbTransactionDAO(this), new DbAccountDAO(this));
+
+
         /*** END ***/
+
+        Log.w("myTag", "This is my message");
+
+
+//        database = new DataBaseHelper(this);
+//        database.addOne(55);
+
     }
 
     /**

@@ -85,6 +85,8 @@ public class ManageExpensesFragment extends Fragment implements View.OnClickList
 
     @Override
     public void onClick(View view) {
+
+
         switch (view.getId()) {
             case R.id.submit_amount:
                 String selectedAccount = (String) accountSelector.getSelectedItem();
