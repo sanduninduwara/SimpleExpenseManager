@@ -28,14 +28,8 @@ import android.util.Log;
 
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.R;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.ExpenseManager;
-import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.InMemoryDemoExpenseManager;
-import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.DataBaseHelper;
 
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.DbDemoExpenseManager;
-import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.AccountDAO;
-import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.TransactionDAO;
-import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.InMemoryAccountDAO;
-import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.InMemoryTransactionDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.DbAccountDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.DbTransactionDAO;
 

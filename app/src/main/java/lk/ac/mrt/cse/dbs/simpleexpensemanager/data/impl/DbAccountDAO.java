@@ -57,7 +57,7 @@ public class DbAccountDAO extends SQLiteOpenHelper implements AccountDAO {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int old, int newv) {
-//        db.execSQL("DROP TABLE IF EXISTS " + ACCOUNTS);
+
     }
 
     @Override

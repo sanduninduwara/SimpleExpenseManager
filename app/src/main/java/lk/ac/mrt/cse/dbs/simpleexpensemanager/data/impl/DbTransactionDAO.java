@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -44,6 +45,7 @@ public class DbTransactionDAO extends SQLiteOpenHelper implements TransactionDAO
                     ExpenseType expenseType = ExpenseType.valueOf(expenseTypeString);
                     transactions.add(new Transaction(date, accountNo, expenseType, amount));
                 } catch (Exception e) {
+                    Log.e(e.toString(),"error!!");
                     e.printStackTrace();
                 }
             }while (cursor.moveToNext());
@@ -60,7 +62,7 @@ public class DbTransactionDAO extends SQLiteOpenHelper implements TransactionDAO
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int old, int newv) {
-//        db.execSQL("DROP TABLE IF EXISTS " + TRANSACTIONS);
+
     }
 
     @Override
@@ -70,12 +72,12 @@ public class DbTransactionDAO extends SQLiteOpenHelper implements TransactionDAO
         transactions.add(transaction);
 
         SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(DATE, dateFormat.format(date));
-        contentValues.put(ACCOUNT_NO, accountNo);
-        contentValues.put(EXPENSE_TYPE, expenseType.name());
-        contentValues.put(AMOUNT, amount);
-        db.insert(TRANSACTIONS, null, contentValues);
+        ContentValues cv = new ContentValues();
+        cv.put(DATE, dateFormat.format(date));
+        cv.put(ACCOUNT_NO, accountNo);
+        cv.put(EXPENSE_TYPE, expenseType.name());
+        cv.put(AMOUNT, amount);
+        db.insert(TRANSACTIONS, null, cv);
     }
 
     @Override
