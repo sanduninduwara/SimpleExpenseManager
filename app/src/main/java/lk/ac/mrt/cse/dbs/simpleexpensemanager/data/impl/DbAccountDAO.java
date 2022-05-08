@@ -83,7 +83,7 @@ public class DbAccountDAO extends SQLiteOpenHelper implements AccountDAO {
     }
 
     @Override
-    public void addAccount(Account account)  {
+    public boolean addAccount(Account account)  {
 
         accounts.put(account.getAccountNo(), account);
 
@@ -94,7 +94,9 @@ public class DbAccountDAO extends SQLiteOpenHelper implements AccountDAO {
         cv.put(ACCOUNT_HOLDER_NAME, account.getAccountHolderName());
         cv.put(BALANCE, account.getBalance());
 
-        db.insert(ACCOUNTS, null, cv);
+        long result = db.insert(ACCOUNTS, null, cv);
+        db.close();
+        return result!=-1;
     }
 
     @Override

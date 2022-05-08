@@ -1,5 +1,3 @@
-lk/ac/mrt/cse/dbs/simpleexpensemanager/data/impl/DataBaseHelper.java
- lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.DataBaseHelper
 lk/ac/mrt/cse/dbs/simpleexpensemanager/control/DbDemoExpenseManager.java
  lk.ac.mrt.cse.dbs.simpleexpensemanager.control.DbDemoExpenseManager
 lk/ac/mrt/cse/dbs/simpleexpensemanager/data/exception/InvalidInputException.java
