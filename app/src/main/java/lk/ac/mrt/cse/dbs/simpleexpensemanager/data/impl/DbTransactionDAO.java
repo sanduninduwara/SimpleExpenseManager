@@ -26,7 +26,7 @@ public class DbTransactionDAO extends SQLiteOpenHelper implements TransactionDAO
     private final List<Transaction> transactions;
 
     public DbTransactionDAO(Context context) {
-        super(context, "TransactionData.db", null, 1);
+        super(context, "190420V_TransactionData.db", null, 1);
         transactions = new LinkedList<>();
 
         SQLiteDatabase db = this.getReadableDatabase();

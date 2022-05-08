@@ -4,7 +4,17 @@
             "outputFile": "C:\\Users\\sandun induwara\\Desktop\\sem 4\\DataBase system\\project\\mini\\SimpleExpenseManager\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sandun induwara\\.gradle\\caches\\transforms-2\\files-2.1\\d1d1709d55c8ab5fa359ce49bd908eb5\\design-26.1.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\sandun induwara\\.gradle\\caches\\transforms-3\\959d21c0c19b412425ceb61ead9cec7d\\transformed\\appcompat-v7-26.1.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\sandun induwara\\.gradle\\caches\\transforms-3\\8597faa0de4b29e847374b2eb26f85bf\\transformed\\design-26.1.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "9",
                         "endColumns": "12",
                         "endOffsets": "505"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\sandun induwara\\.gradle\\caches\\transforms-2\\files-2.1\\22201284f06052f57e5af9bcb65a52a3\\appcompat-v7-26.1.0\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,125,189,260",
-                        "endColumns": "69,63,70,67",
-                        "endOffsets": "120,184,255,323"
                     }
                 }
             ]

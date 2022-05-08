@@ -27,7 +27,7 @@ public class DbAccountDAO extends SQLiteOpenHelper implements AccountDAO {
     private final Map<String, Account> accounts;
 
     public DbAccountDAO(Context context) {
-        super(context, "AccountData.db", null, 1);
+        super(context, "190420V_AccountData.db", null, 1);
         this.accounts = new HashMap<>();
 
         //get existing accounts from database

@@ -21,28 +21,28 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Account;
 @MediumTest
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DbAccountDAOTest {
-    private DbAccountDAO sqLiteDBHelper;
+    private DbAccountDAO accountDAO;
 
     @Before
     public void setup() {
-        sqLiteDBHelper = new DbAccountDAO(ApplicationProvider.getApplicationContext());
+        accountDAO = new DbAccountDAO(ApplicationProvider.getApplicationContext());
     }
 
     @After
     public void teardown() {
-        sqLiteDBHelper.close();
+        accountDAO.close();
     }
 
     @Test
     public void addAccount() {
         Account accout=new Account("100","BOC","sandun",1000);
-        boolean result = sqLiteDBHelper.addAccount(accout);
+        boolean result = accountDAO.addAccount(accout);
         assertThat(result).isTrue();
     }
 
     @Test
     public void getAccount() throws InvalidAccountException {
-        Account account = sqLiteDBHelper.getAccount("100");
+        Account account = accountDAO.getAccount("100");
 
         boolean result = false;
         if (account != null) {
